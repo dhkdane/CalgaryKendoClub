@@ -1,14 +1,17 @@
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import RouteHandler from "./pages/handler/RouteHandler";
+import Navibar from "./pages/Navibar";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
-import Header from "./pages/Header";
-import Nav from "./pages/Nav";
-import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
+    <div>
+      <BrowserRouter>
+        <Navibar />
+        <RouteHandler />
+      </BrowserRouter>
     </div>
   );
 }
