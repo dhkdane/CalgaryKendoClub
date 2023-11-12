@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 function Sidebar() {
   return (
     <div>
-      <ListGroup defaultActiveKey="#link1">
+      <ListGroup>
         <Link to={"/"}>
           <ListGroup.Item action href="#link1">
             home
