@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Sidebar from "./handler/Sidebar";
+import { Link } from "react-router-dom";
 
 function Navibar() {
   const expand = false; // Set the expand property for Navbar
@@ -10,7 +11,9 @@ function Navibar() {
   return (
     <Navbar expand={expand} className="bg-transparent" sticky="top">
       <Container fluid>
-        <Navbar.Brand href="#">Calgary Kendo Club</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Calgary Kendo Club
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
